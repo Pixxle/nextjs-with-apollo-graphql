@@ -1,4 +1,4 @@
-import { TUser } from '@graphql/types/user';
+import { TUser } from '@/graphql/users/type';
 
 const users : TUser[] = [
     {

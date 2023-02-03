@@ -1,4 +1,4 @@
-import {getUser, createUser, updateUser} from './resolver_functions/user';
+import {getUser, createUser, updateUser} from './users/resolver';
 
 const resolvers = {
     Query: {
