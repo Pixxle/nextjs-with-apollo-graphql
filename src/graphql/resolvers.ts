@@ -1,8 +1,9 @@
-import {getUser, createUser, updateUser} from './users/resolver';
+import {createUser, updateUser, getUser, listUsers} from './users/resolver';
 
 const resolvers = {
     Query: {
-      user:getUser,
+      getUser:getUser,
+      listUsers:listUsers,
     },
     Mutation: {
       createUser: createUser,

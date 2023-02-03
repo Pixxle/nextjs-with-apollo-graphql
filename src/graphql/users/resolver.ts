@@ -15,6 +15,10 @@ export function getUser(parent:any, args:TUser, context:any, info:any) {
     return users.find((user) => user.id === args.id);
 }
 
+export function listUsers(parent:any, args:TUser, context:any, info:any) {
+  return users;
+}
+
 export function createUser(parent:any, args:TUser, context:any, info:any) {
     const newUser : TUser = {
       id: String(users.length + 1),
