@@ -1,22 +1,12 @@
-// https://www.apollographql.com/docs/apollo-server/data/resolvers/
-
-const users = [
-  {
-    id: '1',
-    name: 'Elizabeth Bennet',
-  },
-  {
-    id: '2',
-    name: 'Fitzwilliam Darcy',
-  },
-];
-
+import {getUser, createUser, updateUser} from './resolver_functions/user';
 
 const resolvers = {
     Query: {
-      user(parent:any, args:any, context:any, info:any) {
-        return users.find((user) => user.id === args.id);
-      }
+      user:getUser,
+    },
+    Mutation: {
+      createUser: createUser,
+      updateUser: updateUser,
     },
   };
 
