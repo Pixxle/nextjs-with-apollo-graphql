@@ -1,19 +1,15 @@
 import {gql} from "graphql-tag";
+import {USER_TYPE_DEF, USER_QUERY_DEF, USER_MUTATION_DEF} from "./users/gql";
 
 const typeDefs = gql`
-  type User {
-    id: ID!
-    name: String!
-  }
+  ${USER_TYPE_DEF}
 
   type Query {
-    getUser(id: ID!): User
-    listUsers: [User]
+    ${USER_QUERY_DEF}
   }
 
   type Mutation {
-    createUser(name: String!): User
-    updateUser(id: ID!, name: String!): User
+    ${USER_MUTATION_DEF}
   }
 `;
 
