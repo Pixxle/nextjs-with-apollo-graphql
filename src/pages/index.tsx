@@ -18,7 +18,7 @@ export default function Home({ user }: { user: TUser }) {
       <div>
         {listLoading && <p>Loading...</p>}
         {listError && <p>Error: {listError.message}</p>}
-        {listData && listData.listUsers.map((user: TUser) => <p key={Number(user.id)}>{user.name}</p>)}
+        {listData && listData.listUsers.map((user: TUser) => <p key={Number(user.id)}>{user.name}</p>)} 
       </div>
   )
 }
